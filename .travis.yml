@@ -1,0 +1,10 @@
+language: objective-c
+
+install:
+  - sudo chown -R travis ~/Library/RubyMotion
+  - mkdir -p ~/Library/RubyMotion/build
+  - sudo motion update --cache-version=4.4
+  - bundle install
+
+script:
+  - bundle exec rake spec
